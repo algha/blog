@@ -2,15 +2,15 @@
 namespace App\Blog\Dashboard\Https\Controllers;
 
 use Illuminate\Http\Request;
-use App\Blog\Base\Models\User;
+use App\Blog\Base\Models\Category;
 use App\Blog\Base\Https\Controllers\Controller;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
 
     public function List(Request $request, Int $id = null){
-      $users = User::paginate();
-      return $users;
+      $categories = Category::paginate();
+      return $categories;
     }
 
     public function Edit(Request $request){
