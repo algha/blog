@@ -10,8 +10,8 @@ Route::middleware(['web'])
 
        Route::middleware(['dashboard'])
               ->group(function (\Illuminate\Routing\Router $router) {
-              Route::get('/home', 'DashboardController@Home')->name("dashboard.home");
 
+              Route::get('/{any}', 'DashboardController@Home')->where('any', '.*');
               Route::any('/user/create', 'UserController@Edit')->name("dashboard.user.create");
               Route::any('/user/{id}/edit', 'UserController@Edit')->name("dashboard.user.edit");
               Route::delete('/user/{id}/delete', 'UserController@Delete')->name("dashboard.user.delete");
@@ -26,6 +26,9 @@ Route::middleware(['web'])
               Route::any('/post/{id}/edit', 'PostController@Edit')->name("dashboard.post.edit");
               Route::delete('/post/{id}/delete', 'PostController@Delete')->name("dashboard.post.delete");
               Route::get('/post/list', 'PostController@List')->name("dashboard.post.list");
+
+
+              // Route::get('/home', 'DashboardController@Home')->name("dashboard.home");
        });
 
 });

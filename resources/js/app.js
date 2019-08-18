@@ -1,12 +1,26 @@
-require('./bootstrap');
 import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import Routes from './src/Routes.js'; 
+Vue.use(VueRouter)
+
+require('./bootstrap');
+
+import Routes from './src/routes/Routes.js';
+
+Routes.map(function (route) {
+  route.path = '/dashboard' + route.path
+})
+
+const router = new VueRouter({
+  routes: Routes,
+  mode: 'history',
+})
+
 
 import App from './src/App.vue';
 
 
 export default new Vue({
-    Routes,
+    router,
     render: h => h(App),
 });

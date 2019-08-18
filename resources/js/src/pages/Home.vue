@@ -8,7 +8,7 @@
   export default {
       name: "Home",
       mounted() {
-          console.log('Component mounted.')
+          console.log('home Component mounted.')
       }
   }
 </script>

@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <Header />
-    <route-view> </route-view>
+    <app-header />
+    <div>
+     <transition name='fade'>
+       <router-view></router-view>
+     </transition>
+   </div>
   </div>
 </template>
 
@@ -10,7 +14,7 @@ import Header from "./components/Header.vue";
 export default {
   name: "App",
   components: {
-    Header
+    'app-header' : Header,
   }
 };
 </script>
