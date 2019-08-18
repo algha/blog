@@ -21,6 +21,7 @@ class ComposerStaticInit6b3c4ac0dcc92e2757b58e9a8c7fc15e
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        'f40952b52f537c88d802b2469f90bdd7' => __DIR__ . '/..' . '/spatie/laravel-server-side-rendering/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -65,6 +66,7 @@ class ComposerStaticInit6b3c4ac0dcc92e2757b58e9a8c7fc15e
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Ssr\\' => 11,
         ),
         'R' => 
         array (
@@ -248,6 +250,11 @@ class ComposerStaticInit6b3c4ac0dcc92e2757b58e9a8c7fc15e
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Ssr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/server-side-rendering/src',
+            1 => __DIR__ . '/..' . '/spatie/laravel-server-side-rendering/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -380,6 +387,21 @@ class ComposerStaticInit6b3c4ac0dcc92e2757b58e9a8c7fc15e
     );
 
     public static $classMap = array (
+        'App\\Blog\\Api\\Providers\\ModuleServiceProvider' => __DIR__ . '/../..' . '/app/Blog/Api/Privoders/ModuleServiceProvider.php',
+        'App\\Blog\\Base\\Https\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Blog/Base/Https/Controllers/Controller.php',
+        'App\\Blog\\Base\\Models\\Category' => __DIR__ . '/../..' . '/app/Blog/Base/Models/Category.php',
+        'App\\Blog\\Base\\Models\\Post' => __DIR__ . '/../..' . '/app/Blog/Base/Models/Post.php',
+        'App\\Blog\\Base\\Models\\User' => __DIR__ . '/../..' . '/app/Blog/Base/Models/User.php',
+        'App\\Blog\\Base\\Providers\\BlogServiceProvider' => __DIR__ . '/../..' . '/app/Blog/Base/Providers/BlogServiceProvider.php',
+        'App\\Blog\\Dashboard\\Https\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Controllers/AuthController.php',
+        'App\\Blog\\Dashboard\\Https\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Controllers/CategoryController.php',
+        'App\\Blog\\Dashboard\\Https\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Controllers/DashboardController.php',
+        'App\\Blog\\Dashboard\\Https\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Controllers/PostsController.php',
+        'App\\Blog\\Dashboard\\Https\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Controllers/UserController.php',
+        'App\\Blog\\Dashboard\\Https\\Middlewares\\DashboardMiddleware' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Https/Middlewares/DashboardMiddleware.php',
+        'App\\Blog\\Dashboard\\Providers\\ModuleServiceProvider' => __DIR__ . '/../..' . '/app/Blog/Dashboard/Providers/ModuleServiceProvider.php',
+        'App\\Blog\\Dashboard\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Blog/Api/Privoders/RouteServiceProvider.php',
+        'App\\Blog\\Front\\Providers\\ModuleServiceProvider' => __DIR__ . '/../..' . '/app/Blog/Front/Providers/ModuleServiceProvider.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -3222,6 +3244,15 @@ class ComposerStaticInit6b3c4ac0dcc92e2757b58e9a8c7fc15e
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Ssr\\Engine' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Engine.php',
+        'Spatie\\Ssr\\Engines\\Node' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Engines/Node.php',
+        'Spatie\\Ssr\\Engines\\V8' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Engines/V8.php',
+        'Spatie\\Ssr\\Exceptions\\EngineError' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Exceptions/EngineError.php',
+        'Spatie\\Ssr\\Exceptions\\ServerScriptDoesNotExist' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Exceptions/ServerScriptDoesNotExist.php',
+        'Spatie\\Ssr\\Facades\\Ssr' => __DIR__ . '/..' . '/spatie/laravel-server-side-rendering/src/Facades/Ssr.php',
+        'Spatie\\Ssr\\Renderer' => __DIR__ . '/..' . '/spatie/server-side-rendering/src/Renderer.php',
+        'Spatie\\Ssr\\Resolvers\\MixResolver' => __DIR__ . '/..' . '/spatie/laravel-server-side-rendering/src/Resolvers/MixResolver.php',
+        'Spatie\\Ssr\\SsrServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-server-side-rendering/src/SsrServiceProvider.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

@@ -19,6 +19,9 @@ class BlogServiceProvider extends ServiceProvider
 
     public function register()
     {
+        if (! defined('BLOG')) {
+          define('BLOG', realpath(__DIR__.'/../../'));
+        }
         $this->registerProviders();
       }
 

@@ -39,6 +39,15 @@ class DashboardMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+      if ($this->auth->guest()){
+           if ($request->ajax()){
+               $data["message"] = 'You are not logged in.';
+               $data["code"] = 0;
+               return response()->json($data, 200);
+           }else{
+               return redirect()->route('dashboard.login'); // <--- note this
+           }
+       }
+       return $next($request);
     }
 }

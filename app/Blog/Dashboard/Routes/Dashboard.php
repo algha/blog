@@ -4,7 +4,8 @@ Route::prefix('dashboard')
        ->namespace('App\Blog\Dashboard\Https\Controllers')
        ->group(function (\Illuminate\Routing\Router $router) {
 
-       Route::post('/login', 'AuthController@Login')->name("dashboard.login");
+       Route::get('/login', 'AuthController@Login')->name("dashboard.login");
+       Route::post('/login', 'AuthController@LoginPost')->name("dashboard.login.post");
 
        Route::middleware(['dashboard'])
               ->group(function (\Illuminate\Routing\Router $router) {
