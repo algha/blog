@@ -39,7 +39,7 @@ class ModuleServiceProvider extends ServiceProvider
       public function provides()
       {
           return [
-              RouteServiceProvider::class
+              // RouteServiceProvider::class
           ];
       }
 

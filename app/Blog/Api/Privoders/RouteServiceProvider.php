@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Blog\Dashboard\Providers;
+namespace App\Blog\Api\Providers;
 
 use Auth;
 use Illuminate\Support\Facades\View;

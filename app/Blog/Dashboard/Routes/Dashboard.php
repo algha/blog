@@ -1,6 +1,7 @@
 <?php
 
-Route::prefix('dashboard')
+Route::middleware(['web'])
+       ->prefix('dashboard')
        ->namespace('App\Blog\Dashboard\Https\Controllers')
        ->group(function (\Illuminate\Routing\Router $router) {
 

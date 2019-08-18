@@ -12,7 +12,6 @@ class AuthController extends Controller
 {
 
     public function Login(Request $request){
-      echo (Session::get('message'));
       return view("admin::login");
     }
 
@@ -23,12 +22,15 @@ class AuthController extends Controller
       $user = User::where('email', $email)->first();
 
       if (!$user) {
-        return redirect()->back()->with(['message'=> 'user is not exists']);
+        Session::flash('message', 'user is not exists.');
+        return redirect()->back();
       }
 
       if (!Hash::check($password, $user->password)) {
-        return redirect()->back()->with(['message'=> 'email and password is not match']);
+        Session::flash('message', 'email and password is not match.');
+        return redirect()->back();
       }
+
       Auth::login($user, $request->has('stay-login'));
 
       return redirect()->route("dashboard.home");

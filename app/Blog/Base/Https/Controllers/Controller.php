@@ -12,7 +12,6 @@ class Controller extends BaseController
 
     public function __construct(Request $request){
 
-
     }
 
     protected function sendJson($response, $message = "", $code = 1){

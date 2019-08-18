@@ -12,7 +12,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
  *
  * @category PHP
  */
-class RouteServiceProvider extends ServiceProvider
+class RouterServiceProvider extends ServiceProvider
 {
 
     /**

@@ -14,12 +14,13 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      $this->app['view']->addNamespace('admin', base_path() . '/resources/admin/views');
     }
 
     public function register()
     {
         $this->registerProviders();
-      }
+    }
 
       /**
       *load Providers
@@ -39,7 +40,7 @@ class ModuleServiceProvider extends ServiceProvider
       public function provides()
       {
           return [
-              RouteServiceProvider::class
+              RouterServiceProvider::class
           ];
       }
 

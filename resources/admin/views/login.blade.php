@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Dashboard Login</title>
     <link href='/css/app.css' rel='stylesheet' type='text/css'>
-
   </head>
   <body>
     <body>
@@ -15,13 +14,13 @@
               <div class="card-body">
                 <h5 class="card-title text-center">Sign In</h5>
                 <form class="form-signin" method="post">
-                  <!-- @if(Session::has('message')) -->
-                  <p class="alert">{{ Session::get('message') }}</p>
-                  <!-- @endif -->
+                  @csrf
+                  @if(Session::has('message'))
+                  <p class="alert alert-danger">{{ Session::get('message') }}</p>
+                  @endif
                   <div class="form-label-group mb-3">
                       <label for="inputEmail">Email address</label>
                     <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-
                   </div>
 
                   <div class="form-label-group mb-3">
@@ -30,8 +29,8 @@
                   </div>
 
                   <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" name="stay-login" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+                    <input type="checkbox" class="custom-control-input" name="stay-login" id="stay-login">
+                    <label class="custom-control-label" for="stay-login">Remember password</label>
                   </div>
                   <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
                 </form>

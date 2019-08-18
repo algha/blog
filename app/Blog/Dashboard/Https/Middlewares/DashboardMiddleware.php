@@ -2,6 +2,7 @@
 
 namespace App\Blog\Dashboard\Https\Middlewares;
 
+use Auth;
 use Closure;
 use Carbon\Carbon;
 use App\Models\User;

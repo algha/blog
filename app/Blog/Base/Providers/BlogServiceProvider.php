@@ -45,7 +45,7 @@ class BlogServiceProvider extends ServiceProvider
           return [
               \App\Blog\Dashboard\Providers\ModuleServiceProvider::class,
               // \App\Blog\Front\Providers\ModuleServiceProvider::class,
-              // \App\Blog\Api\providers\ModuleServiceProvider::class
+              \App\Blog\Api\Providers\ModuleServiceProvider::class
           ];
       }
 
